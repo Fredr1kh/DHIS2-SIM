@@ -1,0 +1,21 @@
+{
+	"version" : "0.1",
+	"name" : "dhis2-sim",
+	"description" : "Facebook and Twitter integration to DHIS2 favorites of pivot tables, charts and maps.",
+	"launch_path" : "/app/index.html",
+	"appType" : "APP",
+	"icons" : {
+
+	},
+	"developer" : {
+		"name" : "Crappyengineering",
+		"url" : "https://github.com/Fredr1kh/DHIS2-SIM"
+	},
+	"default_locale" : "en",
+	"activities" : {
+		"dhis" : {
+			"href" : "*",
+			"namespace" : "my-namespace"
+		}
+	}
+}
