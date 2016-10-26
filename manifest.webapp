@@ -15,7 +15,6 @@
 	"activities" : {
 		"dhis" : {
 			"href" : "*",
-			"namespace" : "my-namespace"
 		}
 	}
 }
