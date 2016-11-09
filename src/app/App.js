@@ -21,7 +21,7 @@ export default React.createClass({
 
     getDefaultProps() {
         return {
-            name: 'John',
+            name: 'Crappyengineering',
         };
     },
 
@@ -37,8 +37,9 @@ export default React.createClass({
 
     render() {
         const sideBarSections = [
-            { key: 'item1', label: 'Item 1' },
-            { key: 'item2', label: 'Item 2' },
+            { key: 'Maps', label: 'Maps' },
+            { key: 'Charts', label: 'Charts' },
+            { key: 'Pivot', label: 'Pivot Table'}
         ];
 
         return (
@@ -48,7 +49,7 @@ export default React.createClass({
                     sections={sideBarSections}
                     onChangeSection={this._sidebarItemClicked}
                 />
-                <div className="main-content">{`Hello, ${this.props.name}! Your app skeleton set up correctly!`}</div>
+                <div className="main-content">{`Hello, ${this.props.name}! You have sucessfully started your project`}</div>
             </div>
         );
     },
