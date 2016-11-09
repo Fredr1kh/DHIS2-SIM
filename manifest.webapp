@@ -7,15 +7,14 @@
     }
   },
   "appType": "APP",
-  "name": "DHIS2-SIM",
+  "name": "app-skeleton",
   "version": "1.0.0",
-  "description": "Social media integration for DHIS2",
+  "description": "Skeleton app for a DHIS2 web app",
   "developer": {
-    "name": "crappyengineering"
-    "url": "https://github.com/Fredr1kh/DHIS2-SIM"
+    "name": "Mark Polak"
   },
   "icons": {
     "48": "icon.png"
   },
-  "manifest_generated_at": "Wed Nov 09 2016 13:36:09 GMT+0100 (CET)"
+  "manifest_generated_at": "Wed Nov 09 2016 14:02:46 GMT+0100 (CET)"
 }
