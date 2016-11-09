@@ -2,3 +2,4 @@ dhis-live/
 live-database/
 node_modules/
 *.mp4
+*.log
