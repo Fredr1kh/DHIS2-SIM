@@ -1,0 +1,21 @@
+{
+  "launch_path": "index.html",
+  "default_locale": "en",
+  "activities": {
+    "dhis": {
+      "href": "*"
+    }
+  },
+  "appType": "APP",
+  "name": "DHIS2-SIM",
+  "version": "1.0.0",
+  "description": "Social media integration for DHIS2",
+  "developer": {
+    "name": "crappyengineering"
+    "url": "https://github.com/Fredr1kh/DHIS2-SIM"
+  },
+  "icons": {
+    "48": "icon.png"
+  },
+  "manifest_generated_at": "Wed Nov 09 2016 13:36:09 GMT+0100 (CET)"
+}
