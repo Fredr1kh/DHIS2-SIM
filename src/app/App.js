@@ -32,7 +32,7 @@ export default React.createClass({
     },
 
     _sidebarItemClicked(sideBarItemKey) {
-        console.log('Clicked on ', sideBarItemKey);
+        console.log('Clicked on', sideBarItemKey);
     },
 
     render() {
@@ -49,7 +49,7 @@ export default React.createClass({
                     sections={sideBarSections}
                     onChangeSection={this._sidebarItemClicked}
                 />
-                <div className="main-content">{`Hello, ${this.props.name}! You have sucessfully started your project`}</div>
+                <div className="main-content">{`Hello, ${this.props.name}! You have successfully started your project`}</div>
             </div>
         );
     },
