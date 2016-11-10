@@ -7,14 +7,14 @@
     }
   },
   "appType": "APP",
-  "name": "app-skeleton",
-  "version": "1.0.0",
-  "description": "Skeleton app for a DHIS2 web app",
+  "name": "DHIS2-SIM",
+  "version": "0.0.1",
+  "description": "App for sharing charts, maps and pivot tables to Facebook and Twitter",
   "developer": {
-    "name": "Mark Polak"
+    "name": "Crappyengineering"
   },
   "icons": {
     "48": "icon.png"
   },
-  "manifest_generated_at": "Wed Nov 09 2016 15:33:33 GMT+0100 (CET)"
+  "manifest_generated_at": "Thu Nov 10 2016 14:07:00 GMT+0100 (CET)"
 }

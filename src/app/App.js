@@ -32,7 +32,7 @@ export default React.createClass({
     },
 
     _sidebarItemClicked(sideBarItemKey) {
-        log.info('Clicked on ', sideBarItemKey);
+        console.log('Clicked on ', sideBarItemKey);
     },
 
     render() {
