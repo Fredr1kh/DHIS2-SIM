@@ -4,8 +4,10 @@ import React from 'react';
 import HeaderBarComponent from 'd2-ui/lib/app-header/HeaderBar';
 import headerBarStore$ from 'd2-ui/lib/app-header/headerBar.store';
 import withStateFrom from 'd2-ui/lib/component-helpers/withStateFrom';
+import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 
 import Sidebar from './components/Sidebar.jsx';
+
 
 const HeaderBar = withStateFrom(headerBarStore$, HeaderBarComponent);
 
@@ -35,7 +37,8 @@ export default class Main extends React.Component {
         return (
             <div className="app-wrapper">
                 <HeaderBar />
-                <Sidebar />
+                <Sidebar d2={this.props.d2}/>
+                <LoadingMask />
             </div>
         )
     }
