@@ -1,15 +1,24 @@
 import React from 'react';
-import Dropdown from 'react-dropdown';
+
 
 import HeaderBarComponent from 'd2-ui/lib/app-header/HeaderBar';
 import headerBarStore$ from 'd2-ui/lib/app-header/headerBar.store';
 import withStateFrom from 'd2-ui/lib/component-helpers/withStateFrom';
+
+import Sidebar from './components/Sidebar.jsx';
 
 const HeaderBar = withStateFrom(headerBarStore$, HeaderBarComponent);
 
 
 
 export default class Main extends React.Component {
+
+    //Should handle the main layout of the application
+    // Headerbar
+    // Sidebar
+    // Live-preview
+    // Text-input
+
 
     constructor(props) {
         super(props);
@@ -22,31 +31,11 @@ export default class Main extends React.Component {
     }
 
 
-    _onSelect(option) {
-        //Insert fetching code here and update the list of available items
-        console.log(option.value);
-    }
-
-
-
     render() {
-        const options = [
-            {value: 'maps', label: 'Maps'},
-            {value: 'charts', label: 'Charts'},
-            {value: 'reportTables', label: 'Pivots'}
-        ];
-
-        const defaultOption = options[0];
-
         return (
             <div className="app-wrapper">
-                <div>
-                    <HeaderBar />
-                </div>
-                <div>
-                    <Dropdown options={options} onChange={this._onSelect} value={this.defaultOption}
-                              placeholder="Select an entry"/>
-                </div>
+                <HeaderBar />
+                <Sidebar />
             </div>
         )
     }
