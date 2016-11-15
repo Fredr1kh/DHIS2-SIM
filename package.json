@@ -13,7 +13,8 @@
     "lint": "eslint --fix src && ./node_modules/eslint/bin/eslint.js --env node,mocha --global expect,sinon,spy,stub --rule 'no-unused-expressions: 0' test && scss-lint",
     "validate": "npm ls",
     "prestart": "d2-manifest package.json manifest.webapp",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "dev": "webpack-dev-server --inline --hot"
   },
   "keywords": [
     "DHIS2",
@@ -52,6 +53,7 @@
     "react": "^0.14.7",
     "react-addons-test-utils": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-dropdown": "^1.1.0",
     "react-tap-event-plugin": "^0.2.2",
     "sass-loader": "^3.2.0",
     "sinon": "^1.17.3",
