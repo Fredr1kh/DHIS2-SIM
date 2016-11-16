@@ -11,8 +11,10 @@ export default class ShareFacebook extends React.Component {
 
 
     render() {
-        return {
-
-        };
+        return (
+            <div className="Facebook">
+                <button>Facebook</button>
+            </div>
+        );
     }
 }

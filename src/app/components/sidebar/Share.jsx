@@ -14,8 +14,11 @@ export default class Share extends React.Component {
 
 
     render() {
-        return {
-
-        };
+        return (
+            <div className="Share-root">
+                <ShareFacebook />
+                <ShareTwitter />
+            </div>
+        );
     }
 }

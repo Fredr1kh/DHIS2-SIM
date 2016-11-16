@@ -5,6 +5,7 @@ import React from 'react'
 import Dropdown from 'react-dropdown';
 
 import Listview from './sidebar/Listview.jsx'
+import Share from './sidebar/Share.jsx'
 
 
 export default class Sidebar extends React.Component {
@@ -25,7 +26,8 @@ export default class Sidebar extends React.Component {
 
     _onSelect(option) {
         //Insert fetching code here and update the list of available items
-        console.log(this.props.d2.i18n.api.baseUrl + option.value);
+        //console.log(this.props.d2.i18n.api.baseUrl + option.value);
+        console.log(option.value);
     }
 
     render() {
@@ -33,16 +35,18 @@ export default class Sidebar extends React.Component {
         console.log(this.props.d2.i18n.api.baseUrl);
 
         const options = [
-            {value: '/maps', label: 'Maps'},
-            {value: '/charts', label: 'Charts'},
-            {value: '/reportTables', label: 'Pivots'}
+            {value: `${this.props.d2.models.maps.apiEndpoint}`, label: 'Maps'},
+            {value: `${this.props.d2.models.charts.apiEndpoint}`, label: 'Charts'},
+            {value: `${this.props.d2.models.reportTables.apiEndpoint}`, label: 'Pivots'}
         ];
 
         const defaultOption = options[0];
 
         return (
-            <div className="sidebar-root" style={null}>
+            <div className="Sidebar-root" style={null}>
                 <Dropdown options={options} onChange={this._onSelect} value={this.defaultOption} placeholder="Select an entry"/>
+                <Listview />
+                <Share />
             </div>
         )
     }

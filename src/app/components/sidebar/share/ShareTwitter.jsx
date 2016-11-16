@@ -9,8 +9,10 @@ export default class ShareTwitter extends React.Component {
 
 
     render() {
-        return {
-
-        };
+        return (
+            <div className="Twitter">
+                <button>Twitter</button>
+            </div>
+        );
     }
 }

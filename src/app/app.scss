@@ -1,6 +1,6 @@
 @import '../../node_modules/d2-ui/lib/css/HeaderBar.css';
 
-$left-bar-width: 295px;
+$left-bar-width: 305px;
 
 html {
   background-color: #f3f3f3;
@@ -11,13 +11,17 @@ html {
   margin-top: 4rem;
 }
 
-.left-bar {
+/**********-----SIDEBAR-----**********/
+
+.Sidebar-root {
   bottom: 0;
   left: 0;
   padding-top: 3rem;
   position: fixed;
   top: 0;
   width: $left-bar-width;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 
@@ -29,6 +33,7 @@ html {
   margin-left: $left-bar-width + 30;
 }
 
+/**********-----DROPDOWN-----**********/
 
 .Dropdown-root {
   bottom: 0;
@@ -36,7 +41,7 @@ html {
   padding-top: 0.5rem;
   position: fixed;
   top: 0;
-  width: $left-bar-width;
+  //width: $left-bar-width;
 }
 
 
@@ -137,3 +142,25 @@ html {
   display: block;
   padding: 8px 10px;
 }
+
+/**********-----END DROPDOWN-----**********/
+
+/**********-----LISTVIEW-----**********/
+
+
+/**********-----END LISTVIEW-----**********/
+/**********-----SHARE-----**********/
+
+.Facebook {
+  float: left;
+  margin-left: 30px;
+
+}
+
+.Twitter {
+  float: right;
+  margin-right: 50px;
+}
+
+/**********-----END SHARE-----**********/
+/**********-----END SIDEBAR-----**********/

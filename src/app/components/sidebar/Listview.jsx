@@ -10,8 +10,11 @@ export default class Listview extends React.Component {
 
 
     render() {
-        return {
+        return (
+            <div className="List-root">
+                <h2>THIS IS A LIST</h2>
+            </div>
 
-        };
+        );
     }
 }
