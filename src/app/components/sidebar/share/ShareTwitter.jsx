@@ -8,10 +8,21 @@ export default class ShareTwitter extends React.Component {
     // No known children/subcomponents
 
 
+    constructor(props) {
+        super(props);
+
+        this._onClick = this._onClick.bind(this);
+    }
+
+
+    _onClick() {
+        console.log("Pressed the twitter button");
+    }
+
     render() {
         return (
             <div className="Twitter">
-                <button>Twitter</button>
+                <button onClick={this._onClick}>Twitter</button>
             </div>
         );
     }

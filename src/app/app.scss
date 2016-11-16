@@ -147,6 +147,10 @@ html {
 
 /**********-----LISTVIEW-----**********/
 
+.List-root {
+  height: 300px;
+}
+
 
 /**********-----END LISTVIEW-----**********/
 /**********-----SHARE-----**********/
@@ -154,7 +158,6 @@ html {
 .Facebook {
   float: left;
   margin-left: 30px;
-
 }
 
 .Twitter {
