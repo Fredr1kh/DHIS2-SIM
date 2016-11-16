@@ -11,7 +11,7 @@ export default class ShareTwitter extends React.Component {
     constructor(props) {
         super(props);
 
-        this._onClick = this._onClick.bind(this);
+        //this._onClick = this._onClick.bind(this);
     }
 
 
@@ -22,7 +22,7 @@ export default class ShareTwitter extends React.Component {
     render() {
         return (
             <div className="Twitter">
-                <button onClick={this._onClick}>Twitter</button>
+                <button onClick={this._onClick.bind(this)}>Twitter</button>
             </div>
         );
     }

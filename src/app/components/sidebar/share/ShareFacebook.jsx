@@ -12,7 +12,7 @@ export default class ShareFacebook extends React.Component {
     constructor(props) {
         super(props);
 
-        this._onClick = this._onClick.bind(this);
+        //this._onClick = this._onClick.bind(this);
     }
 
 
@@ -23,7 +23,7 @@ export default class ShareFacebook extends React.Component {
     render() {
         return (
             <div className="Facebook">
-                <button onClick={this._onClick}>Facebook</button>
+                <button onClick={this._onClick.bind(this)}>Facebook</button>
             </div>
         );
     }
