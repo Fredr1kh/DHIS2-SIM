@@ -19,6 +19,9 @@ export default class Listview extends React.Component {
            <Item value={val.value}/>
         ));*/
 
+        console.log(this.props.list);
+        console.log("Hello from Listview");
+
         return (
             <div className="List-root">
                 <h2>THIS IS A LIST</h2>
