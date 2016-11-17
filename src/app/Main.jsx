@@ -8,7 +8,6 @@ import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 
 import Sidebar from './components/Sidebar.jsx';
 
-
 const HeaderBar = withStateFrom(headerBarStore$, HeaderBarComponent);
 
 
@@ -31,7 +30,6 @@ export default class Main extends React.Component {
             d2: this.props.d2,
         };
     }
-
 
     render() {
         return (
