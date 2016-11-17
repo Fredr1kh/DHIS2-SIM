@@ -4,7 +4,6 @@ import log from 'loglevel';
 import HeaderBarComponent from 'd2-ui/lib/app-header/HeaderBar';
 import headerBarStore$ from 'd2-ui/lib/app-header/headerBar.store';
 import withStateFrom from 'd2-ui/lib/component-helpers/withStateFrom';
-import Charts from './components/Charts.jsx'
 
 
 import Sidebar from 'd2-ui/lib/sidebar/Sidebar.component';
@@ -60,7 +59,6 @@ export default React.createClass({
                 sections={sideBarSections}
                    onChangeSection={this._sidebarItemClicked}/>
                 //<div className="main-content">{`Hello, ${this.props.name}! You have successfully started your project`}</div>
-                <Charts />
             </div>
         );
     },

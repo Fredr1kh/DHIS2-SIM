@@ -20,7 +20,7 @@ export default class Sidebar extends React.Component {
 
     constructor(props) {
         super(props);
-        this._onSelect = this._onSelect.bind(this); // <--- IMPORTANT RIGHT THERE!!!!!!!!!!!!!!!!
+        //this._onSelect = this._onSelect.bind(this); // <--- IMPORTANT RIGHT THERE!!!!!!!!!!!!!!!!
     }
 
 
