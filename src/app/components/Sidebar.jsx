@@ -20,14 +20,18 @@ export default class Sidebar extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.state = { data : "Loading..."}
+
         //this._onSelect = this._onSelect.bind(this); // <--- IMPORTANT RIGHT THERE!!!!!!!!!!!!!!!!
     }
 
 
     _onSelect(option) {
+        console.log(this.state.data);
         //Insert fetching code here and update the list of available items
         //console.log(this.props.d2.i18n.api.baseUrl + option.value);
-        console.log(option.value);
+        console.log(option.label + " is found at " + option.value+".json?paging=false");
     }
 
     fetchData() {
@@ -36,7 +40,7 @@ export default class Sidebar extends React.Component {
             username: 'admin',
             password: 'district'
             }
-      })  
+      })
 
       ax.get(this.props.d2.models.maps.apiEndpoint+"?paging=false").then(function(response){
          /*for (let i = 0; i < response.data.length; i++){
@@ -66,7 +70,7 @@ export default class Sidebar extends React.Component {
 
         return (
             <div className="Sidebar-root" style={null}>
-                <Dropdown options={options} onChange={this._onSelect} value={this.defaultOption} placeholder="Select an entry"/>
+                <Dropdown options={options} onChange={this._onSelect.bind(this)} value={this.defaultOption} placeholder="Select an entry"/>
                 <Listview />
                 <Share />
             </div>
