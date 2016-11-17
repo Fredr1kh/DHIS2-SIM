@@ -32,9 +32,9 @@ export default class Sidebar extends React.Component {
         //Insert fetching code here and update the list of available items
         //console.log(this.props.d2.i18n.api.baseUrl + option.value);
         console.log(option.label + " is found at " + option.value+".json?paging=false");
-        this.setState( { data : this.fetchData(option.value+"?paging=false") });
+        //this.setState( { data : this.fetchData(option.value+"?paging=false") });
         //console.log(this.state.data);
-
+        this.fetchData(option.value+"?paging=false")
     }
 
 
@@ -46,25 +46,16 @@ export default class Sidebar extends React.Component {
             }
         });
 
-        return ax.get(param)
-            .then(function (response) {
+        ax.get(param)
+            .then( (response)  => {
                 /*for (let i = 0; i < response.data.length; i++){
                  this.state.maps.push(response.data[i]);
                  console.log("adding "+ response.data[i]);
                  }*/
-                console.log(response.data);
-                return response.data;
+                //console.log(response.data);
+                this.setState( { data : response.data } );
             });
     }
-
-    componentDidMount() {
-        this.fetchData();
-    }
-
-    componentDidUpdate() {
-        
-    }
-
 
     render() {
 
