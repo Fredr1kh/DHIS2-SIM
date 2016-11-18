@@ -24,8 +24,9 @@ export default class Share extends React.Component {
     render() {
         return (
             <div className="item" onMouseOver={this._onMouseOver.bind(this)}>
-                <b>{this.state.data}</b><br></br>
-                <b>{this.state.id}</b>
+                <span>{this.state.data}</span>
+                <br></br>
+                <span>ID: {this.state.id}</span>
             </div>
         );
     }
