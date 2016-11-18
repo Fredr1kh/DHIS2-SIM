@@ -7,7 +7,7 @@ export default class Share extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { displayName : null, id : null };
+        this.state = { data : props.text.displayName, id : props.text.id };
     }
     _onMouseOver(event) {
         //Do the preview thingy
@@ -15,7 +15,6 @@ export default class Share extends React.Component {
 
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
         //console.log(Object.keys(nextProps.list));
         this.setState( { data : nextProps.text.displayName, id : nextProps.text.id } );
     }
@@ -29,5 +28,6 @@ export default class Share extends React.Component {
                 <span>ID: {this.state.id}</span>
             </div>
         );
+        console.log("")
     }
 }

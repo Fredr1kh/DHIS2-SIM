@@ -38,25 +38,6 @@ export default class Listview extends React.Component {
             let { data:  data, key: key } = this.state;
             //let as = [];
             console.log(data[key]);
-            /*listItems = data[key]
-                .map( (obj) => {
-                    let {displayName : name , id: id} = obj;
-                    return 
-                    (
-                    <div>
-                    <Item name={name} id={id} />;
-                    </div>
-                    ) //TODO Understand this.
-                });*/
-
-            console.log(listItems);
-            /*return(
-                <ul>
-                {data[key].map(function(key, result){
-                    return(<Item key={key}  />);
-                })}
-                </ul>
-                );*/
 
                 let arr = data[key].map((displayName, i) => <Item key={i} text={displayName}/>);
                 console.log(arr[0].props.text.displayName);
