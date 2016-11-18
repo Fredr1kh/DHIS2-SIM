@@ -46,6 +46,7 @@ const webpackConfig = {
                 loader: 'babel',
                 query: {
                     presets: ['es2015', 'stage-0', 'react'],
+                    plugins: ['transform-decorators-legacy', 'transform-class-properties', 'react-hot-loader/babel'],
                 },
             },
             {

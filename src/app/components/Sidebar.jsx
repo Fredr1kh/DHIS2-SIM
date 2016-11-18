@@ -35,6 +35,10 @@ export default class Sidebar extends React.Component {
         //this.setState( { data : this.fetchData(option.value+"?paging=false") });
         //console.log(this.state.data);
         this.fetchData(option.value+"?paging=false")
+
+
+        //Try mobx
+        this.props.store.apiEndpoint = option.value;
     }
 
 
@@ -72,8 +76,8 @@ export default class Sidebar extends React.Component {
         return (
             <div className="Sidebar-root" style={null}>
                 <Dropdown options={options} onChange={this._onSelect.bind(this)} value={this.defaultOption} placeholder="Select an entry"/>
-                <Listview list={this.state.data} />
-                <Share />
+                <Listview list={this.state.data} store={this.props.store} />
+                <Share store={this.props.store} />
             </div>
         )
     }

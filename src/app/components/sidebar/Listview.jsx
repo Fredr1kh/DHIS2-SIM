@@ -2,9 +2,11 @@
  * Created by Fredr1kh on 15.11.2016.
  */
 import React from 'react'
+import { observer } from 'mobx-react'
 
 import Item from './listview/Item.jsx'
 
+@observer
 export default class Listview extends React.Component {
 
     //This should handle the listing of the available resources
@@ -39,10 +41,13 @@ export default class Listview extends React.Component {
             //let as = [];
             console.log(data[key]);
 
-                let arr = data[key].map((displayName, i) => <Item key={i} text={displayName}/>);
+                let arr = data[key].map((displayName, i) => <li key={i} ><Item key={i} text={displayName} /></li>);
                 console.log(arr[0].props.text.displayName);
                 console.log(arr)
-                return(<span>{arr}</span>);
+                return(
+                    <div className="List-root">
+                        <ul>{arr}</ul>
+                    </div>);
             
         }
         // For logical purposes.
