@@ -12,7 +12,7 @@ export default class Listview extends React.Component {
 
     constructor(props) {
         super(props);
-        this .state = { data : null, key : null };
+        this.state = { data : null, key : null };
     }
 
     componentWillReceiveProps(nextProps) {
@@ -22,14 +22,11 @@ export default class Listview extends React.Component {
         //console.log(nextProps.list[key][0]);
         //const { tmp } = nextProps.list;
         //console.log(tmp);
-
         this.setState( { data : nextProps.list , key : Object.keys(nextProps.list)[0] } );
     }
 
 
     render() {
-
-
         //Something like this to create the list
         /*const elementList = this.props.data.map( val => (
            <Item value={val.value}/>
@@ -39,26 +36,46 @@ export default class Listview extends React.Component {
 
         if(this.state.data !== null) {
             let { data:  data, key: key } = this.state;
-            //console.log(data);
-
-            listItems = data[key]
+            //let as = [];
+            console.log(data[key]);
+            /*listItems = data[key]
                 .map( (obj) => {
                     let {displayName : name , id: id} = obj;
-                    return <Item name={name} id={id} />; //TODO Understand this.
-                });
+                    return 
+                    (
+                    <div>
+                    <Item name={name} id={id} />;
+                    </div>
+                    ) //TODO Understand this.
+                });*/
+
+            console.log(listItems);
+            /*return(
+                <ul>
+                {data[key].map(function(key, result){
+                    return(<Item key={key}  />);
+                })}
+                </ul>
+                );*/
+
+                let arr = data[key].map((displayName, i) => <Item key={i} text={displayName}/>);
+                console.log(arr[0].props.text.displayName);
+                console.log(arr)
+                return(<span>{arr}</span>);
+            
         }
-        console.log(listItems);
-
-
+        // For logical purposes.
+        else {
+             return (
+            <div className="List-root">
+                <h2>THIS IS A LIST</h2>
+            </div>
+        );
+        }
         //console.log("Hello from Listview")
         //console.log(this.state.data);
         //console.log("Hello from Listview");
 
-        return (
-            <div className="List-root">
-                <h2>THIS IS A LIST</h2>
-            </div>
-
-        );
+       
     }
 }
