@@ -21,8 +21,8 @@ h4 {
 .Sidebar-root {
   bottom: 0;
   left: 0;
-  padding-top: 3rem;
-  position: fixed;
+  padding-top: 0,5rem;
+  float: left;
   top: 0;
   width: $left-bar-width;
   margin-left: 5px;
@@ -177,3 +177,9 @@ h4 {
 
 /**********-----END SHARE-----**********/
 /**********-----END SIDEBAR-----**********/
+
+.content-root {
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+}

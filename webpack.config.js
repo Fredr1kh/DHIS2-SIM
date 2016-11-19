@@ -17,7 +17,7 @@ try {
     console.info('Using default config');
     dhisConfig = {
         //baseUrl: 'https://play.dhis2.org/demo',
-        baseUrl: 'http://localhost:8082',
+        baseUrl: 'https://play.dhis2.org/demo',
         authorization: 'Basic YWRtaW46ZGlzdHJpY3Q=' // admin:district
     };
 }

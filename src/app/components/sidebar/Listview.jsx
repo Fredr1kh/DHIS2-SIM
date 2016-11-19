@@ -33,7 +33,7 @@ export default class Listview extends React.Component {
         /*const elementList = this.props.data.map( val => (
            <Item value={val.value}/>
         ));*/
-
+        console.log(this.props.store.apiEndpoint)
         let listItems = [];
 
         if(this.state.data !== null) {
@@ -41,8 +41,8 @@ export default class Listview extends React.Component {
             //let as = [];
             console.log(data[key]);
 
-                let arr = data[key].map((displayName, i) => <li key={i} ><Item key={i} text={displayName} /></li>);
-                console.log(arr[0].props.text.displayName);
+                let arr = data[key].map((displayName, i) => <Item key={i} text={displayName} store={this.props.store} />);
+               // console.log(arr[0].props.text.displayName);
                 console.log(arr)
                 return(
                     <div className="List-root">
@@ -54,7 +54,7 @@ export default class Listview extends React.Component {
         else {
              return (
             <div className="List-root">
-                <h2>THIS IS A LIST</h2>
+                <ul><Item key={1} text="Loading..." store={this.props.store}/></ul>
             </div>
         );
         }

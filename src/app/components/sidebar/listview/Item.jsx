@@ -13,6 +13,10 @@ export default class Share extends React.Component {
         //Do the preview thingy
     }
 
+    _onClick(e) {
+        console.log("");
+    }
+
 
     componentWillReceiveProps(nextProps) {
         //console.log(Object.keys(nextProps.list));
@@ -21,12 +25,16 @@ export default class Share extends React.Component {
 
 
     render() {
+
         return (
-            <div className="item" onMouseOver={this._onMouseOver.bind(this)}>
+
+            <li className="item" key={this.state.id}>{this.state.data}</li>
+
+           /* <div className="item" onMouseOver={this._onMouseOver.bind(this)}>
                 <span>{this.state.data}</span>
                 <br></br>
                 <span>ID: {this.state.id}</span>
-            </div>
+            </div>*/
         );
         console.log("")
     }

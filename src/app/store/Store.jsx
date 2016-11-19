@@ -17,6 +17,7 @@ class Item {
 export class Store {
     @observable items = [];
     @observable apiEndpoint = "";
+    @observable shareUrl = "";
 
     addItem(item) {
        this.items.push(new Item(item.id, item.displayName));
@@ -24,6 +25,10 @@ export class Store {
 
     reset() {
         this.items.replace([]);
+    }
+
+    setItem(id) {
+        this.shareUrl = this.apiEndpoint+"/"+id;
     }
 
 }
