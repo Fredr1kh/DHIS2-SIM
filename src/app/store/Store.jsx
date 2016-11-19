@@ -20,6 +20,7 @@ export class Store {
     @observable shareUrl = "";
     @observable previous = "";
     @observable shareText = "Derpface";
+    @observable disableText = false;
 
     addItem(item) {
        this.items.push(new Item(item.id, item.displayName));
