@@ -10,22 +10,27 @@ export default class Comment extends React.Component{
     _attachToShare(e) {
         e.preventDefault();
         let {disableText, shareText} = this.props.store;
+        let [ div, det, att] = [ $("#commentsText"), $("#detached"), $("#attached") ];
+
+
 
         if(disableText === false) {
-            let tmp = $("#commentsText").val()
-            $("#commentsText").val(shareText !== tmp ? tmp : shareText);
+            let tmp = div.val();
+
+            div.val(shareText !== tmp ? tmp : shareText);
             this.props.store.shareText = "";
-            $("#detached").slideDown(500, function() {
+
+            det.slideDown(500, function() {
                 setTimeout(function() {
-                    $("#detached").slideUp(500);
+                    det.slideUp(500);
                 }, 500)
             });
         } else {
-            this.props.store.shareText = $("#commentsText").val()
+            this.props.store.shareText = div.val();
 
-            $("#attached").slideDown(500, function() {
+            att.slideDown(500, function() {
                 setTimeout(function() {
-                    $("#attached").slideUp(500);
+                    att.slideUp(500);
                 }, 500)
             });
         }

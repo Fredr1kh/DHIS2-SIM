@@ -45,7 +45,6 @@ export default class Listview extends React.Component {
         else {
             return (
                 <div className="List-root">
-                    <ul><Item key={1} text="Loading..." store={this.props.store}/></ul>
                 </div>
             );
         }
