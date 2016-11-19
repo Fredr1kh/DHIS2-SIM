@@ -12,7 +12,9 @@ export default class Previewer extends React.Component {
 
 
         return(
-            <div>Previous: {this.props.store.previous}</div>
+            <div>Previous: {this.props.store.previous}
+            <br />Text: {this.props.store.shareText}
+            </div>
         );
     }
 }

@@ -19,6 +19,7 @@ export class Store {
     @observable apiEndpoint = "";
     @observable shareUrl = "";
     @observable previous = "";
+    @observable shareText = "Derpface";
 
     addItem(item) {
        this.items.push(new Item(item.id, item.displayName));
