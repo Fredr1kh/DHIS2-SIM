@@ -2,7 +2,7 @@
  * Created by Fredr1kh on 18.11.2016.
  */
 
-import {observable} from 'mobx'
+import {observable, computed} from 'mobx'
 
 class Item {
     @observable id;
@@ -14,10 +14,13 @@ class Item {
     }
 }
 
-export class Store {
+class Store {
     @observable items = [];
     @observable apiEndpoint = "";
     @observable shareUrl = "";
+    @observable previewUrl = "";
+    @observable textArea = "Comments section";
+
 
     addItem(item) {
        this.items.push(new Item(item.id, item.displayName));
@@ -29,8 +32,17 @@ export class Store {
 
     setItem(id) {
         this.shareUrl = this.apiEndpoint+"/"+id;
+        this.previewUrl = this.shareUrl+"/data";
     }
+
+    @computed get preview() {
+        return this.previewUrl;
+    }
+
+
+
 
 }
 
-export default new Store
+export default Store
+export { Store }

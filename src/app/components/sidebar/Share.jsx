@@ -16,7 +16,7 @@ export default class Share extends React.Component {
 
     render() {
 
-        console.log("Got this: " + this.props.store.apiEndpoint);
+        console.log("Share: " + this.props.store.apiEndpoint);
 
         return (
             <div className="Share-root">

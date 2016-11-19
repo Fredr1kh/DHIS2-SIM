@@ -9,10 +9,11 @@ export default class Previewer extends React.Component {
 
 
     render() {
-
+        
+        console.log("Previewer: " + this.props.store.previewUrl);
 
         return(
-            <div>{this.props.store.apiEndpoint}</div>
+            <div>This: {this.props.store.apiEndpoint}</div>
         );
     }
 }
