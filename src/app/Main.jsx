@@ -7,7 +7,7 @@ import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 
 import Content from './components/Content.jsx';
 import Sidebar from './components/Sidebar.jsx';
-import Store from './store/Store.jsx';
+
 
 const HeaderBar = withStateFrom(headerBarStore$, HeaderBarComponent);
 
@@ -36,8 +36,8 @@ export default class Main extends React.Component {
         return (
             <div className="app-wrapper">
                 <HeaderBar />
-                <Sidebar d2={this.props.d2} store={Store}/>
-                <Content store={Store}  />
+                <Sidebar d2={this.props.d2} store={this.props.store}/>
+                <Content store={this.props.store}  />
                 <LoadingMask />
             </div>
         )
