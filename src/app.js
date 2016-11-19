@@ -8,6 +8,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import log from 'loglevel';
 import { init, config, getManifest } from 'd2/lib/d2';
+import Store from './app/store/Store.jsx';
 
 import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 
@@ -26,7 +27,7 @@ render(<LoadingMask />, document.getElementById('app'));
  */
 function startApp(d2) {
     console.log(d2);
-    render(<Main d2={d2} />, document.querySelector('#app'));
+    render(<Main d2={d2} store={Store}/>, document.querySelector('#app'));
 }
 
 
