@@ -38,6 +38,7 @@ export default class Sidebar extends React.Component {
 
 
         //Try mobx
+        this.props.store.previous = this.props.store.apiEndpoint;
         this.props.store.apiEndpoint = option.value;
     }
 

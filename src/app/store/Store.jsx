@@ -18,6 +18,7 @@ export class Store {
     @observable items = [];
     @observable apiEndpoint = "";
     @observable shareUrl = "";
+    @observable previous = "";
 
     addItem(item) {
        this.items.push(new Item(item.id, item.displayName));

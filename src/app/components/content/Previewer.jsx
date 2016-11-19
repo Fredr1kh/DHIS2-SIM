@@ -12,7 +12,7 @@ export default class Previewer extends React.Component {
 
 
         return(
-            <div>{this.props.store.apiEndpoint}</div>
+            <div>Previous: {this.props.store.previous}</div>
         );
     }
 }
