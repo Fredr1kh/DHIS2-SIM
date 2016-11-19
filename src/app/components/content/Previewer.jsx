@@ -2,7 +2,9 @@
  * Created by Fredr1kh on 19.11.2016.
  */
 import React from 'react'
+import {observer} from 'mobx-react'
 
+@observer
 export default class Previewer extends React.Component {
 
 
@@ -10,7 +12,7 @@ export default class Previewer extends React.Component {
 
 
         return(
-            <div>YupYup</div>
+            <div>{this.props.store.apiEndpoint}</div>
         );
     }
 }
