@@ -14,13 +14,16 @@ export default class Share extends React.Component {
     }
 
     _onClick(e) {
-        console.log("");
+        console.log(e.target.id);
+        this.props.store.selectedId = e.target.id;
     }
 
 
     componentWillReceiveProps(nextProps) {
         //console.log(Object.keys(nextProps.list));
         this.setState( { data : nextProps.text.displayName, id : nextProps.text.id } );
+    _onMouseOver(e) {
+        this.props.store.previewId = e.target.id;
     }
 
 
@@ -28,7 +31,7 @@ export default class Share extends React.Component {
 
         return (
 
-            <li className="item" key={this.state.id}>{this.state.data}</li>
+            <button className="item" id={this.state.id} onClick={this._onClick.bind(this)} onMouseOver={this._onMouseOver.bind(this)}>{this.state.data}</button>
 
            /* <div className="item" onMouseOver={this._onMouseOver.bind(this)}>
                 <span>{this.state.data}</span>
