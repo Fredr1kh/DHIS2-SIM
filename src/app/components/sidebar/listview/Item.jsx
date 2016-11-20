@@ -18,14 +18,9 @@ export default class Share extends React.Component {
         this.props.store.selectedId = e.target.id;
     }
 
-
-    componentWillReceiveProps(nextProps) {
-        //console.log(Object.keys(nextProps.list));
-        this.setState( { data : nextProps.text.displayName, id : nextProps.text.id } );
     _onMouseOver(e) {
         this.props.store.previewId = e.target.id;
     }
-
 
     render() {
 
