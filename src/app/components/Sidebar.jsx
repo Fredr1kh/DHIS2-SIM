@@ -29,11 +29,8 @@ export default class Sidebar extends React.Component {
 
     _onSelect(option) {
         console.log(this.state.data);
-        //Insert fetching code here and update the list of available items
-        //console.log(this.props.d2.i18n.api.baseUrl + option.value);
         console.log(option.label + " is found at " + option.value+".json?paging=false");
         //this.setState( { data : this.fetchData(option.value+"?paging=false") });
-        //console.log(this.state.data);
         this.fetchData(option.value+"?paging=false")
 
 

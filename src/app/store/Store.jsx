@@ -4,35 +4,14 @@
 
 import {observable} from 'mobx'
 
-class Item {
-    @observable id;
-    @observable displayName;
-
-    constructor(id, displayName) {
-        this.id = id;
-        this.displayName = displayName;
-    }
-}
-
 export class Store {
-    @observable items = [];
     @observable apiEndpoint = "";
     @observable shareUrl = "";
     @observable previous = "";
     @observable shareText = "Derpface";
+    @observable selectedId = "";
+    @observable previewId = "";
     @observable disableText = false;
-
-    addItem(item) {
-       this.items.push(new Item(item.id, item.displayName));
-    }
-
-    reset() {
-        this.items.replace([]);
-    }
-
-    setItem(id) {
-        this.shareUrl = this.apiEndpoint+"/"+id;
-    }
 
 }
 
