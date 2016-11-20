@@ -10,7 +10,7 @@ export default class Comment extends React.Component{
     _attachToShare(e) {
         e.preventDefault();
         let {disableText, shareText} = this.props.store;
-        let [ div, det, att] = [ $("#commentsText"), $("#detached"), $("#attached") ];
+        let [ div, det, att] = [ $("#commentsText"), $("#deleted"), $("#attached") ];
 
 
 
@@ -50,7 +50,7 @@ export default class Comment extends React.Component{
                 <form onSubmit={this._attachToShare.bind(this)}>
                     <textarea disabled={disableText} id="commentsText" className="comment-text" form="textfrm" rows="10" columns="100" placeholder="Sharing comments">{shareText}</textarea>
                     <div id="attached">Message Attached</div>
-                    <div id="detached">Message Detached</div>
+                    <div id="deleted">Message Deleted</div>
                     <input type="submit" value="Attach" onClick={this.toggleActive.bind(this, true)}/>
                     <input type="submit" value="Reset" onClick={this.toggleActive.bind(this, false)} />
                 </form>
