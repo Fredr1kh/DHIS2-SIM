@@ -33,13 +33,13 @@ export default class Listview extends React.Component {
             let {data:  data, key: key} = this.state;
             //console.log(data[key]);
 
-            let arr = data[key].map((displayName, i) => <Item key={i} text={displayName} store={this.props.store}/>);
+            let arr = data[key]
+                .map((displayName, i) => <Item key={i} text={displayName} store={this.props.store} />);
             //console.log(arr)
             return (
                 <div className="List-root">
-                    <ul>{arr}</ul>
+                    {arr}
                 </div>);
-
         }
         // For logical purposes.
         else {

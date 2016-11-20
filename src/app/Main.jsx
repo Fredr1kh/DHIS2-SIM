@@ -38,7 +38,6 @@ export default class Main extends React.Component {
                 <HeaderBar />
                 <Sidebar d2={this.props.d2} store={this.props.store}/>
                 <Content store={this.props.store}  />
-                <LoadingMask />
             </div>
         )
     }
