@@ -153,7 +153,11 @@ h4 {
 /**********-----LISTVIEW-----**********/
 
 .List-root {
-  height: 300px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  height: 600px;
+  overflow: scroll;
+  width: inherit;
 }
 
 .item {
@@ -161,8 +165,8 @@ h4 {
   -webkit-box-shadow: inset 0px 0px 15px 6px rgba(0,0,0,0.6);
   -moz-box-shadow: inset 0px 0px 15px 6px rgba(0,0,0,0.6);
   box-shadow: inset 0px 0px 15px 6px rgba(0,0,0,0.6);
-  text-align: center;
-  height: 60px;
+  height: 40px;
+  width: $left-bar-width - 20px;
 }
 
 
@@ -208,7 +212,7 @@ h4 {
   color: #00cc66;
 }
 
-#detached {
+#deleted {
   display:none;
   color: #9d0000;
 }
