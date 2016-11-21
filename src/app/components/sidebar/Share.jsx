@@ -15,13 +15,14 @@ export default class Share extends React.Component {
 
 
     render() {
+        let {store} = this.props;
 
         console.log("Share: " + this.props.store.apiEndpoint);
 
         return (
             <div className="Share-root">
-                <ShareFacebook store={this.props.store} />
-                <ShareTwitter store={this.props.store} />
+                <ShareFacebook store={store} />
+                <ShareTwitter store={store} />
             </div>
         );
     }

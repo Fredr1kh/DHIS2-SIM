@@ -11,7 +11,8 @@ export default class Previewer extends React.Component {
     render() {
 
         let {apiEndpoint, selectedId, previewId} = this.props.store;
-        let imgUrl = selectedId === "" ? "" : `${apiEndpoint}/${selectedId}/data`
+        let imgUrl = selectedId !== "" && previewId === "" ? `${apiEndpoint}/${selectedId}/data` :
+                    previewId !== ""  ? `${apiEndpoint}/${previewId}/data` : "";
         return(
             <div>Previous: {this.props.store.previous}
             <br />Text: {this.props.store.shareText}

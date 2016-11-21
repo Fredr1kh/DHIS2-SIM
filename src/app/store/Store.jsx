@@ -12,6 +12,7 @@ export class Store {
     @observable selectedId = "";
     @observable previewId = "";
     @observable disableText = false;
+    @observable data;
 
 }
 

@@ -5,14 +5,6 @@ import React from 'react'
 
 export default class Share extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { data : props.text.displayName, id : props.text.id };
-    }
-    _onMouseOver(event) {
-        //Do the preview thingy
-    }
-
     _onClick(e) {
         console.log(e.target.id);
         this.props.store.selectedId = e.target.id;
@@ -22,18 +14,16 @@ export default class Share extends React.Component {
         this.props.store.previewId = e.target.id;
     }
 
+    _onMouseOut() {
+        this.props.store.previewId = "";
+    }
+
     render() {
 
+        let {id, displayName} = this.props.text;
+
         return (
-
-            <button className="item" id={this.state.id} onClick={this._onClick.bind(this)} onMouseOver={this._onMouseOver.bind(this)}>{this.state.data}</button>
-
-           /* <div className="item" onMouseOver={this._onMouseOver.bind(this)}>
-                <span>{this.state.data}</span>
-                <br></br>
-                <span>ID: {this.state.id}</span>
-            </div>*/
+            <button className="item" id={id} onClick={this._onClick.bind(this)} onMouseOver={this._onMouseOver.bind(this)} onMouseOut={this._onMouseOut.bind(this)}>{displayName}</button>
         );
-        console.log("")
     }
 }

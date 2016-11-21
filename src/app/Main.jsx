@@ -33,11 +33,13 @@ export default class Main extends React.Component {
     }
 
     render() {
+        let { d2, store } = this.props;
+
         return (
             <div className="app-wrapper">
                 <HeaderBar />
-                <Sidebar d2={this.props.d2} store={this.props.store}/>
-                <Content store={this.props.store}  />
+                <Sidebar d2={d2} store={store}/>
+                <Content store={store}  />
             </div>
         )
     }

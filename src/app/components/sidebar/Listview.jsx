@@ -12,40 +12,22 @@ export default class Listview extends React.Component {
     //This should handle the listing of the available resources
     // Resource/List-item
 
-    constructor(props) {
-        super(props);
-        this.state = { data : null, key : null };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        console.log(Object.keys(nextProps.list));
-
-        //console.log(nextProps.list[key][0]);
-        this.setState( { data : nextProps.list , key : Object.keys(nextProps.list)[0] } );
-    }
-
-
     render() {
         console.log(this.props.store.apiEndpoint)
-        let listItems = [];
+        let {data, key} =  this.props.store;
 
-        if (this.state.data !== null) {
-            let {data:  data, key: key} = this.state;
-            //console.log(data[key]);
+        if (data !== undefined) {
+            let key = Object.keys(data)[0];
 
             let arr = data[key]
                 .map((displayName, i) => <Item key={i} text={displayName} store={this.props.store} />);
-            //console.log(arr)
             return (
-                <div className="List-root">
-                    {arr}
-                </div>);
+                <div className="List-root">{arr}</div>);
         }
         // For logical purposes.
         else {
             return (
-                <div className="List-root">
-                </div>
+                <div className="List-root"></div>
             );
         }
     }

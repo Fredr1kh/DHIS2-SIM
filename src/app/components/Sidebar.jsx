@@ -18,21 +18,10 @@ export default class Sidebar extends React.Component {
     //  -> Facebook (Separate code)
     //  -> Twitter  (Separate code)
 
-    constructor(props) {
-        super(props);
-
-        this.state = { data : "Loading..."}
-
-        //this._onSelect = this._onSelect.bind(this); // <--- IMPORTANT RIGHT THERE!!!!!!!!!!!!!!!!
-    }
-
-
     _onSelect(option) {
-        console.log(this.state.data);
         console.log(option.label + " is found at " + option.value+".json?paging=false");
         //this.setState( { data : this.fetchData(option.value+"?paging=false") });
         this.fetchData(option.value+"?paging=false")
-
 
         //Try mobx
         this.props.store.previous = this.props.store.apiEndpoint;
@@ -50,23 +39,22 @@ export default class Sidebar extends React.Component {
 
         ax.get(param)
             .then( (response)  => {
-                /*for (let i = 0; i < response.data.length; i++){
-                 this.state.maps.push(response.data[i]);
-                 console.log("adding "+ response.data[i]);
-                 }*/
-                //console.log(response.data);
-                this.setState( { data : response.data } );
+                this.props.store.data = response.data;
+                //this.setState( { data : response.data } );
             });
     }
 
     render() {
+        
+        let {models} = this.props.d2;
+        let {store} = this.props;
 
         console.log(this.props.d2.i18n.api.baseUrl);
-        console.log(this.props.d2.models.maps.apiEndpoint);
+        console.log(models.maps.apiEndpoint);
         const options = [
-            {value: `${this.props.d2.models.maps.apiEndpoint}`, label: 'Maps'},
-            {value: `${this.props.d2.models.charts.apiEndpoint}`, label: 'Charts'},
-            {value: `${this.props.d2.models.reportTables.apiEndpoint}`, label: 'Pivots'}
+            {value: `${models.maps.apiEndpoint}`, label: 'Maps'},
+            {value: `${models.charts.apiEndpoint}`, label: 'Charts'},
+            {value: `${models.reportTables.apiEndpoint}`, label: 'Pivots'}
         ];
 
         const defaultOption = options[0];
@@ -74,8 +62,8 @@ export default class Sidebar extends React.Component {
         return (
             <div className="Sidebar-root" style={null}>
                 <Dropdown options={options} onChange={this._onSelect.bind(this)} value={this.defaultOption} placeholder="Select an entry"/>
-                <Listview list={this.state.data} store={this.props.store} />
-                <Share store={this.props.store} />
+                <Listview store={store} />
+                <Share store={store} />
             </div>
         )
     }
