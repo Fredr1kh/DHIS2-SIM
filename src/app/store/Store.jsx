@@ -8,7 +8,7 @@ export class Store {
     @observable apiEndpoint = "";
     @observable shareUrl = "";
     @observable previous = "";
-    @observable shareText = "Derpface";
+    @observable shareText = "";
     @observable selectedId = "";
     @observable previewId = "";
     @observable disableText = false;

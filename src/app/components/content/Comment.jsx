@@ -10,9 +10,7 @@ export default class Comment extends React.Component{
     _attachToShare(e) {
         e.preventDefault();
         let {disableText, shareText} = this.props.store;
-        let [ div, det, att] = [ $("#commentsText"), $("#deleted"), $("#attached") ];
-
-
+        let [ div, det, att] = [ $("#commentsText"), $("#deleted"), $("#attached") ]; //Jquery selectors
 
         if(disableText === false) {
             let tmp = div.val();
@@ -38,7 +36,6 @@ export default class Comment extends React.Component{
 
     toggleActive(val) {
         this.props.store.disableText = val;
-
     }
 
     render() {
@@ -48,7 +45,7 @@ export default class Comment extends React.Component{
         return(
             <div>Current: {apiEndpoint}
                 <form onSubmit={this._attachToShare.bind(this)}>
-                    <textarea disabled={disableText} id="commentsText" className="comment-text" form="textfrm" rows="10" columns="100" placeholder="Sharing comments">{shareText}</textarea>
+                    <textarea disabled={disableText} id="commentsText" className="comment-text" form="textfrm" rows="10" columns="100" placeholder="Sharing comments" defaultValue={shareText}></textarea>
                     <div id="attached">Message Attached</div>
                     <div id="deleted">Message Deleted</div>
                     <input type="submit" value="Attach" onClick={this.toggleActive.bind(this, true)}/>
