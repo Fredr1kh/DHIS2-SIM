@@ -10,16 +10,17 @@ export default class Previewer extends React.Component {
 
     render() {
 
-        let {apiEndpoint, selectedId, previewId} = this.props.store;
+        let {apiEndpoint, selectedId, previewId, selectedTitle, previewTitle} = this.props.store;
+
         let imgUrl = selectedId !== "" && previewId === "" ? `${apiEndpoint}/${selectedId}/data` :
                     previewId !== ""  ? `${apiEndpoint}/${previewId}/data` : "";
+
+        let title = selectedTitle !== "" && previewTitle === "" ? selectedTitle :
+                    previewTitle !== ""  ? previewTitle : "";
         return(
-            <div>Previous: {this.props.store.previous}
-            <br />Text: {this.props.store.shareText}
-            <br />Selected Id: {selectedId}
-            <br />Preview Id: {previewId}
-            <br />Selected Image: {imgUrl}
-            <br /><img src={imgUrl}/>
+            <div>
+                <h1>{title}</h1>
+                <img src={imgUrl}/>
             </div>
         );
     }

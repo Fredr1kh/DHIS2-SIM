@@ -2,7 +2,7 @@
  * Created by Fredr1kh on 15.11.2016.
  */
 import React from 'react'
-import { observer } from 'mobx-react'
+import {observer} from 'mobx-react'
 
 import Item from './listview/Item.jsx'
 
@@ -20,9 +20,10 @@ export default class Listview extends React.Component {
             let key = Object.keys(data)[0];
 
             let arr = data[key]
-                .map((displayName, i) => <Item key={i} text={displayName} store={this.props.store} />);
+                .map((displayName, i) => <Item key={i} text={displayName} store={this.props.store}/>);
             return (
-                <div className="List-root">{arr}</div>);
+                <div className="List-root">{arr}</div>
+            );
         }
         // For logical purposes.
         else {

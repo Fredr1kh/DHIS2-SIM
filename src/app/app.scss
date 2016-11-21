@@ -1,6 +1,6 @@
 @import '../../node_modules/d2-ui/lib/css/HeaderBar.css';
 
-$left-bar-width: 305px;
+$left-bar-width: 25%;
 
 html {
   background-color: #f3f3f3;
@@ -29,11 +29,11 @@ html {
 
 
 .main-content {
-  margin-left: $left-bar-width + 30;
+  //margin-left: $left-bar-width + 30;
 }
 
 .preview-content {
-  margin-left: $left-bar-width + 30;
+  //margin-left: $left-bar-width + 30;
 }
 
 /**********-----DROPDOWN-----**********/
@@ -155,40 +155,25 @@ html {
   margin-top: 10px;
   height: 600px;
   overflow-y: scroll;
-  width: inherit;
+  width: 100%;
 }
 
 .item {
   padding-left: 16dp;
   margin-bottom:2px;
   height: 40px;
-  width: $left-bar-width - 20px;
+  width: 100%;
 }
 
 
 /**********-----END LISTVIEW-----**********/
-/**********-----SHARE-----**********/
-
-.Facebook {
-  float: left;
-  margin-left: 30px;
-}
-
-.Twitter {
-  float: right;
-  margin-right: 50px;
-}
-
-/**********-----END SHARE-----**********/
 /**********-----END SIDEBAR-----**********/
 
 .content-root {
   margin-left: 10px;
   margin-top: 10px;
-  width: 60%;
+  width: 70%;
   float: left;
-  width: 50%;
-  float: right;
 }
 
 .TwShareButton {

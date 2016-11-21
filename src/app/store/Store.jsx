@@ -6,12 +6,15 @@ import {observable} from 'mobx'
 
 export class Store {
     @observable apiEndpoint = "";
+
     @observable shareUrl = "";
-    @observable previous = "";
-    @observable shareText = "";
+
     @observable selectedId = "";
+    @observable selectedTitle = "";
+
     @observable previewId = "";
-    @observable disableText = false;
+    @observable previewTitle = "";
+
     @observable data;
 
 }
