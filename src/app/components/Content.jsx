@@ -16,7 +16,7 @@ import {
 export default class Content extends React.Component {
     render() {
 
-        let {selectedId, apiEndpoint, shareText, data} = this.props.store;
+        let {selectedId, apiEndpoint, selectedTitle, data} = this.props.store;
 
         const {
             FacebookShareButton,
@@ -25,7 +25,7 @@ export default class Content extends React.Component {
 
         const FacebookIcon = generateShareIcon('facebook');
         const TwitterIcon = generateShareIcon('twitter');
-        const shareUrl = apiEndpoint + "/" + selectedId + "/data";
+        const shareUrl = `${apiEndpoint}/${selectedId}/data`;
 
         // Hides social sharing button when no chart is selected.
         let style = {};
@@ -40,13 +40,13 @@ export default class Content extends React.Component {
                     <div id="shareButtons" style={style}>
                         <FacebookShareButton
                             url={shareUrl}
-                            title={shareText}
+                            title={selectedTitle}
                             className="FbShareButton">
                             <FacebookIcon size={48}/>
                         </FacebookShareButton>
                         <TwitterShareButton
                             url={shareUrl}
-                            title={shareText}
+                            title={selectedTitle}
                             className="TwShareButton">
                             <TwitterIcon size={48}/>
                         </TwitterShareButton>
