@@ -27,8 +27,9 @@ export default class Listview extends React.Component {
         }
         // For logical purposes.
         else {
+            let style = {display : 'none'};
             return (
-                <div className="List-root"></div>
+                <div className="List-root" style={style}></div>
             );
         }
     }
