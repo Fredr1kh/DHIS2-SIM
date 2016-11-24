@@ -4,3 +4,7 @@ node_modules/
 *.mp4
 *.log
 build/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/workspace.xml
+manifest.webapp
