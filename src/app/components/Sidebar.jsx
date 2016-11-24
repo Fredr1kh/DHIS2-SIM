@@ -6,7 +6,6 @@ import Dropdown from 'react-dropdown';
 import axios from 'axios';
 
 import Listview from './sidebar/Listview.jsx'
-import Share from './sidebar/Share.jsx'
 
 
 export default class Sidebar extends React.Component {
@@ -14,16 +13,11 @@ export default class Sidebar extends React.Component {
     //Should handle all components for the sidebar:
     // Dropdown (Render dropdown)
     // Listview (Render items)
-    // Share (Render sharebuttons)
-    //  -> Facebook (Separate code)
-    //  -> Twitter  (Separate code)
 
     _onSelect(option) {
         console.log(option.label + " is found at " + option.value+".json?paging=false");
-        //this.setState( { data : this.fetchData(option.value+"?paging=false") });
         this.fetchData(option.value+"?paging=false")
 
-        //Try mobx
         this.props.store.previous = this.props.store.apiEndpoint;
         this.props.store.apiEndpoint = option.value;
     }
@@ -40,7 +34,6 @@ export default class Sidebar extends React.Component {
         ax.get(param)
             .then( (response)  => {
                 this.props.store.data = response.data;
-                //this.setState( { data : response.data } );
             });
     }
 

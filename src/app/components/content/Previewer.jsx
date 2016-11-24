@@ -14,6 +14,7 @@ export default class Previewer extends React.Component {
             .then(function(response) {
                 return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
             })
+            .then(response => response.json())
             .catch(error => console.error(error));
 
         console.log(a);
