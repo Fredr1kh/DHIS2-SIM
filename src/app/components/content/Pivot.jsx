@@ -15,7 +15,7 @@ export default class Pivot extends React.Component {
     render() {
 
         return(
-            <iframe src={this.props.src} frameborder="0" scrolling="no" width="500" height="500"/>
+            <iframe src={this.props.src} frameBorder="0" scrolling="yes" width="100%" height="100%"/>
         );
     }
 

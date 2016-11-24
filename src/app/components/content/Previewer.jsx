@@ -58,14 +58,12 @@ export default class Previewer extends React.Component {
             imgUrl += ".html";
             return(
               <div>
-                  <h1>{title}</h1>
                   <Pivot src={imgUrl}/>
               </div>
             );
         } else {
             return (
                 <div>
-                    <h1>{title}</h1>
                     <Image src={imgUrl}/>
                 </div>
             );
