@@ -21,7 +21,7 @@ export class Store {
     requestHeaders = {
         method : 'GET',
         'Content-Type' :'application/json',
-        credentials : 'same-origin',
+        // credentials : 'same-origin',
     }
 
 }

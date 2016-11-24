@@ -31,8 +31,13 @@ export default class Sidebar extends React.Component {
             }
         });
 
+        let {requestHeaders} = this.props.store;
+
+
+
         ax.get(param)
-            .then( (response)  => {
+            .then( (response) => {
+                console.log(response);
                 this.props.store.data = response.data;
             });
     }
