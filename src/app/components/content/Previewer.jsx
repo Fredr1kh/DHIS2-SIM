@@ -8,6 +8,19 @@ import {observer} from 'mobx-react'
 export default class Previewer extends React.Component {
 
 
+    fetchImage() {
+        let {apiEndpoint, selectedId} = this.props.store;
+        let a = fetch(`${apiEndpoint}/${selectedId}`)
+            .then(function(response) {
+                return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
+            })
+            .catch(error => console.error(error));
+
+        console.log(a);
+    }
+
+
+
     render() {
 
         let {apiEndpoint, selectedId, previewId, selectedTitle, previewTitle} = this.props.store;
@@ -17,6 +30,9 @@ export default class Previewer extends React.Component {
 
         let title = selectedTitle !== "" && previewTitle === "" ? selectedTitle :
                     previewTitle !== ""  ? previewTitle : "";
+
+        this.fetchImage();
+
         return(
             <div>
                 <h1>{title}</h1>
