@@ -9,8 +9,8 @@ export default class Previewer extends React.Component {
 
 
     fetchImage() {
-        let {apiEndpoint, selectedId} = this.props.store;
-        let a = fetch(`${apiEndpoint}/${selectedId}`, this.props.store.requestHeaders)
+        let {apiEndpoint, selectedId, requestHeaders} = this.props.store;
+        let a = fetch(`${apiEndpoint}/${selectedId}`, requestHeaders)
             .then(function(response) {
                 return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
             })
