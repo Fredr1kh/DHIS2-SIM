@@ -54,7 +54,7 @@ export default class Sidebar extends React.Component {
 
         return (
             <div className="Sidebar-root" style={null}>
-                <Dropdown options={options} onChange={this._onSelect.bind(this)} value={this.defaultOption} placeholder="Select an entry"/>
+                <Dropdown options={options} onChange={this._onSelect.bind(this)} value={this.defaultOption} placeholder="Select favorite"/>
                 <Listview store={store} />
             </div>
         )
