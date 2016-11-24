@@ -16,6 +16,7 @@ export class Store {
     @observable previewTitle = "";
 
     @observable data;
+    @observable image;
 
     requestHeaders = {
         method : 'GET',

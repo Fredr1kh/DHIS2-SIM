@@ -12,19 +12,19 @@ export default class Previewer extends React.Component {
         let {apiEndpoint, selectedId, requestHeaders} = this.props.store;
         let a = fetch(`${apiEndpoint}/${selectedId}`, requestHeaders)
             .then(function(response) {
-                return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
+               return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
             })
-            .then(response => response.json())
+            .then( (response) => {
+                return this.props.store.image = response;
+            })
             .catch(error => console.error(error));
-
-        console.log(a);
     }
 
 
 
     render() {
 
-        let {apiEndpoint, selectedId, previewId, selectedTitle, previewTitle} = this.props.store;
+        let {apiEndpoint, selectedId, previewId, selectedTitle, previewTitle, image} = this.props.store;
 
         let imgUrl = selectedId !== "" && previewId === "" ? `${apiEndpoint}/${selectedId}/data` :
                     previewId !== ""  ? `${apiEndpoint}/${previewId}/data` : "";
@@ -33,6 +33,8 @@ export default class Previewer extends React.Component {
                     previewTitle !== ""  ? previewTitle : "";
 
         this.fetchImage();
+
+        console.log(image);
 
         return(
             <div>
