@@ -8,3 +8,4 @@ build/
 .idea/misc.xml
 .idea/workspace.xml
 manifest.webapp
+src/app/components/sidebar/Share.jsx
