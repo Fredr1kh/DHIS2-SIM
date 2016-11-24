@@ -14,7 +14,7 @@ export default class Listview extends React.Component {
 
     render() {
         console.log(this.props.store.apiEndpoint)
-        let {data, key} =  this.props.store;
+        let {data} =  this.props.store;
 
         if (data !== undefined) {
             let key = Object.keys(data)[0];

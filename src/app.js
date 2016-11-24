@@ -14,7 +14,6 @@ import LoadingMask from 'd2-ui/lib/loading-mask/LoadingMask.component';
 
 import 'react-tap-event-plugin';
 
-import App from './app/App';
 import Main from './app/Main.jsx';
 import './app/app.scss';
 
