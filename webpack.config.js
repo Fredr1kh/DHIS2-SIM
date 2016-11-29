@@ -17,7 +17,7 @@ try {
     console.warn(`\nWARNING! Failed to load DHIS config:`, e.message);
     console.info('Using default config');
     dhisConfig = {
-        //baseUrl: 'https://play.dhis2.org/demo',
+        //baseUrl: 'https://localhost:8082',
         baseUrl: 'https://play.dhis2.org/test',
         authorization: 'Basic YWRtaW46ZGlzdHJpY3Q=' // admin:district
     };

@@ -10,10 +10,8 @@ import Pivot from './Pivot.jsx'
 @observer
 export default class Previewer extends React.Component {
 
-
-    fetchImage(param) {
+    /*fetchImage(param) {
         let {apiEndpoint, selectedId} = this.props.store;
-
         let ax = axios.create({
             auth: {
                 username: 'admin',
@@ -29,8 +27,7 @@ export default class Previewer extends React.Component {
                 console.log(response.data);
                 this.props.store.image = response.data;
             });
-
-
+        
         // fetch(`${apiEndpoint}/${selectedId}`, requestHeaders)
         //     /*.then(function(response) {
         //        return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
@@ -39,8 +36,7 @@ export default class Previewer extends React.Component {
         //         this.props.store.image = response.data;
         //     })
         //     .catch(error => console.error(error));
-    }
-
+    //}
 
     render() {
 
@@ -52,22 +48,18 @@ export default class Previewer extends React.Component {
         let title = selectedTitle !== "" && previewTitle === "" ? selectedTitle :
             previewTitle !== "" ? previewTitle : "";
 
-
         if (imgUrl.includes("reportTables")) {
-            console.log("Motherfucking pivot")
-            imgUrl += ".html";
             return(
               <div>
-                  <Pivot src={imgUrl}/>
+                  <Pivot src={imgUrl} title={selectedTitle}/>
               </div>
             );
         } else {
             return (
                 <div>
-                    <Image src={imgUrl}/>
+                    <Image src={imgUrl} />
                 </div>
             );
-
         }
     }
 }
