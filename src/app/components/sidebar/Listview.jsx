@@ -10,7 +10,6 @@ export default class Listview extends React.Component {
     // Resource/List-item
 
     render() {
-        console.log(this.props.store.apiEndpoint)
         let {data} =  this.props.store;
 
         if (data !== undefined) {
