@@ -58,7 +58,6 @@ export default React.createClass({
                 <Sidebar
                 sections={sideBarSections}
                    onChangeSection={this._sidebarItemClicked}/>
-                //<div className="main-content">{`Hello, ${this.props.name}! You have successfully started your project`}</div>
             </div>
         );
     },
