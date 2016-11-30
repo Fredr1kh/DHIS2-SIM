@@ -45,14 +45,10 @@ export default class Pivot extends React.Component {
 	}
 
 	componentDidUpdate() {
-		if(this.props.title === this.state.data.title){
-			console.log("Not updated")
-		}
-		else {
+		if(this.props.title !== this.state.data.title){
 			console.log("Update")
 			this.fetchData(this.props.src)
 		}
-		
 	}
 
     render() {
@@ -67,7 +63,6 @@ export default class Pivot extends React.Component {
     	
     else{
     	this.state.headers = {}
-    	console.log(this.state.data)
     	this.state.rows = {}
     	let arr = new Array()
     	let arr2 = new Array()
