@@ -1,6 +1,3 @@
-/**
- * Created by Fredr1kh on 15.11.2016.
- */
 import React from 'react'
 import Dropdown from 'react-dropdown';
 import axios from 'axios';

@@ -1,6 +1,3 @@
-/**
- * Created by Fredr1kh on 19.11.2016.
- */
 import React from 'react'
 import {observer} from 'mobx-react'
 import axios from 'axios'
