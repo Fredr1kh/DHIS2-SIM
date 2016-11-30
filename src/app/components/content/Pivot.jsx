@@ -81,7 +81,6 @@ export default class Pivot extends React.Component {
     	for(let i = 0; i<this.state.data.rows.length; i++){
     		let temp = new Array()
     		for(let j = 0; j<this.state.data.rows[i].length; j++){
-    			console.log(j)
     			if(this.state.ids.includes(j)){
     				temp.push(this.state.data.rows[i][j])
     			}
