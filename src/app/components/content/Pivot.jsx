@@ -56,14 +56,12 @@ export default class Pivot extends React.Component {
 	}
 
     render() {
-    	//let data = this.props.store.data.reportTables.slice();
     	if(this.props.title !== this.state.data.title){
         return(
         	<div>
         		<h2>Loading...</h2>
         		<LoadingMask />
         	</div>
-            //<iframe src={this.props.src} frameBorder="0" scrolling="yes" width="100%" height="100%"/>
         );
     }
     	

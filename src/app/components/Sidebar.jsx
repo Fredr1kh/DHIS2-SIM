@@ -52,6 +52,7 @@ export default class Sidebar extends React.Component {
         const options = [
             {value: `${models.maps.apiEndpoint}`, label: 'Maps'},
             {value: `${models.charts.apiEndpoint}`, label: 'Charts'},
+            {value: `${models.eventCharts.apiEndpoint}`, label: 'Event Charts'},
             {value: `${models.reportTables.apiEndpoint}`, label: 'Pivots'}
         ];
 
