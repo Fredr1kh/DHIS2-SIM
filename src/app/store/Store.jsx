@@ -1,7 +1,3 @@
-/**
- * Created by Fredr1kh on 18.11.2016.
- */
-
 import {observable} from 'mobx'
 
 export class Store {

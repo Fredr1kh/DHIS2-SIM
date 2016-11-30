@@ -1,6 +1,3 @@
-/**
- * Created by Fredr1kh on 15.11.2016.
- */
 import React from 'react'
 import {observer} from 'mobx-react'
 
@@ -13,7 +10,6 @@ export default class Listview extends React.Component {
     // Resource/List-item
 
     render() {
-        console.log(this.props.store.apiEndpoint)
         let {data} =  this.props.store;
 
         if (data !== undefined) {
