@@ -20,6 +20,7 @@ export default class Sidebar extends React.Component {
 
         this.props.store.previous = this.props.store.apiEndpoint;
         this.props.store.apiEndpoint = option.value;
+        this.props.store.selectedId = ""
     }
 
 
@@ -32,9 +33,6 @@ export default class Sidebar extends React.Component {
         });
 
         let {requestHeaders} = this.props.store;
-
-
-
         ax.get(param)
             .then( (response) => {
                 console.log(response);
