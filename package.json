@@ -1,6 +1,6 @@
 {
   "name": "DHIS2-SIM",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "App for sharing charts, maps and pivot tables to Facebook and Twitter",
   "main": "src/index.html",
   "scripts": {
