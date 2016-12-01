@@ -6,9 +6,6 @@ import Item from './listview/Item.jsx'
 @observer
 export default class Listview extends React.Component {
 
-    //This should handle the listing of the available resources
-    // Resource/List-item
-
     render() {
         let {data} =  this.props.store;
 

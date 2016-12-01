@@ -170,10 +170,12 @@ html {
 
 .TwShareButton {
   float:left;
+  margin-top:10px;
 }
 
 .FbShareButton {
   float:left;
+  margin-top:10px;
 }
  
 .comment-text {
@@ -214,4 +216,8 @@ table {
 tbody {
     display: table-row-group;
     vertical-align: middle;
+}
+
+.loader {
+  margin-left: 20%
 }

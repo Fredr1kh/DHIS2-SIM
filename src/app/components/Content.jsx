@@ -24,12 +24,12 @@ export default class Content extends React.Component {
         const TwitterIcon = generateShareIcon('twitter');
         const shareUrl = `${apiEndpoint}/${selectedId}/data`;
 
-        // Hides social sharing button when no chart is selected.
+        // Hides social sharing button when no data is selected.
         let style = {};
         if (!selectedId) {
             style.display = 'none'
         }
-
+        // If dataset is selected, display previewfield and sharebuttons
         if (data !== undefined) {
             return (
                 <div className="content-root">
@@ -54,6 +54,8 @@ export default class Content extends React.Component {
         else {
             return (
                 <div className="content-root">
+                    <h2>Welcome to DHIS-Social Integration Management</h2>
+                    <h3>Please select a dataset</h3>
                 </div>
             );
         }

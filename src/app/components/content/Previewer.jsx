@@ -6,36 +6,6 @@ import Pivot from './Pivot.jsx'
 
 @observer
 export default class Previewer extends React.Component {
-    //Caused too many calls for each preview, slowed things down massively
-    //preview on mouseover
-    /*fetchImage(param) {
-        let {apiEndpoint, selectedId} = this.props.store;
-        let ax = axios.create({
-            auth: {
-                username: 'admin',
-                password: 'district'
-            },
-            headers: {
-                'Content-Type' :'image/png'
-            }
-        });
-
-        ax.get(param)
-            .then((response) => {
-                console.log(response.data);
-                this.props.store.image = response.data;
-            });
-        
-        // fetch(`${apiEndpoint}/${selectedId}`, requestHeaders)
-        //     /*.then(function(response) {
-        //        return response.status >= 200 && response.status < 300 ? Promise.resolve(response) : Promise.reject(response);
-        //     })*/
-        //     .then( (response) => {
-        //         this.props.store.image = response.data;
-        //     })
-        //     .catch(error => console.error(error));
-    //}
-
     render() {
 
         let {apiEndpoint, selectedId, previewId, selectedTitle, previewTitle, image} = this.props.store;
